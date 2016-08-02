@@ -1,0 +1,22 @@
+server.port=8092
+
+#--- Spring Admin ---#
+spring.boot.admin.url=http://localhost:8089
+#--- Spring Admin ---#
+
+#--- Security ---#
+security.url=<%= @komea_security_url %>
+#--- Security ---#
+
+#--- Elasticsearch ---#
+elasticsearch.cluster=tocea
+elasticsearch.node=komea
+elasticsearch.local=false
+elasticsearch.path-home=build/elasticsearch-home
+elasticsearch.host=127.0.0.1
+elasticsearch.port=9300
+#--- Elasticsearch ---#
+
+#------ Logging ------#
+logging.config=logback.xml
+#------ Logging ------#

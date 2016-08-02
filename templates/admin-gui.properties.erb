@@ -1,0 +1,20 @@
+server.port=9000
+mode_local=false
+
+#--- Spring Admin ---#
+spring.boot.admin.url=http://localhost:8089
+#--- Spring Admin ---#
+
+#--- Security ---#
+security.url=<%= @komea_security_url %>
+login=<%= @default_user %>
+password=<%= @default_password %>
+#--- Security ---#
+
+#--- Dashboard Services ---#
+organization_url=http://localhost:8091
+#--- Dashboard Services ---#
+
+#------ Logging ------#
+logging.config=logback.xml
+#------ Logging ------#

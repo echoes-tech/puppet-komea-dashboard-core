@@ -1,0 +1,20 @@
+server.port=8095
+
+#--- Spring Admin ---#
+spring.boot.admin.url=http://localhost:8089
+#--- Spring Admin ---#
+
+#--- Security ---#
+security.url=<%= @komea_security_url %>
+security.user.name=<%= @default_user %>
+security.user.password=<%= @default_password %>
+#--- Security ---#
+
+#-- Dashboard Services --#
+komea.organization.url=http://localhost:8091
+komea.timeseries.url=http://localhost:8090
+komea.metrics.url=http://localhost:8092
+
+#------ Logging ------#
+logging.config=logback.xml
+#------ Logging ------#
