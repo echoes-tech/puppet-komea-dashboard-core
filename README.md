@@ -1,27 +1,115 @@
-# puppet-komea-dashboard-core
+#### Table of Contents
 
-Manage Komea Dashboard core functionalities installation and configuration from Puppet.
+1. [Overview](#overview)
+2. [Module Description - What the module does and why it is useful](#module-description)
+3. [Setup - The basics of getting started with Komea Dashboard](#setup)
+    * [Setup requirements](#setup-requirements)
+    * [Beginning with Komea Dashboard Core](#beginning-with-komea-dashboard-core)
+4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
+5. [Limitations - OS compatibility, etc.](#limitations)
+6. [Development - Guide for contributing to the module](#development)
+7. [Contributors](#contributors)
 
-## Requirements
+## Overview
+
+Puppet module to manage Komea Dashboard core functionalities installation and configuration.
+
+## Module Description
+
+This module installs and configures [Komea Dashboard](https://echoes.fr/ksf/).
+
+## Setup
+
+### Setup Requirements
 
 * **java** 1.7 or higher
 * package **curl**
 * package **zip/unzip**
 * a running **ElasticSearch** _(version 2.3 or higher)_ database that can be accessed by the machine that will host Komea Dashboard 
 
-## Parameters
+Supports Puppet v3 (optionally with future parser) and v4 with Ruby versions 1.8.7 (Puppet v3 only), 1.9.3, 2.0.0 and 2.1.0.
 
-| Parameter              | Value type | Default value | Description | 
-|:----------------------:|:----------:|:-------------:|-------------|
-| version                | _String_ | _sprint_ | Komea Dashboard's version that will be installed | 
-| activemq_version       | _String_ | _5.12.2_ | Apache ActiveMQ's version                        | 
-| komea_security_version | _String_ | _0.1_    | Komea Security's version                         |
-| default_user           | _String_ | _undef_  | The username of a valid Komea Security's user that will be used by the microservices to communicate with each other |
-| default_password       | _String_ | _undef_  | The password of the Komea Security's user that will be used by the microservices to communicate with each other |
-| nexus_url              | _String_ | _undef_  | The url of the Nexus server that will be used to retrieve Komea Dashboard's artifacts |
-| nexus_repository       | _String_ | _komea_  | The name of the Nexus repository that contains Komea Dashboard Core's artifacts       |
-| nexus_third_parties_repository | _String_ | _komea-third-parties_ | The name of the Nexus repository that contains Komea Dashboard's third parties components _(Apache ActiveMQ, etc)_ |
-| nexus_user             | _String_ | _undef_  | The username of a valid Nexus user with the necessary privileges to download all required artifacts |
-| nexus_password         | _String_ | _undef_  | The password of the Nexus user that will be used to download the required artifacts |
-| base_location          | _String_ | _/opt/echoes/dashboard_ | The path of the directory where Komea Dashboard Core components will be installed (the directory will be automatically created if it does not exist) |
-| log_location           | _String_ | _/var/log_ | The path of the directory that will contains all output logs of each Komea Dashboard's microservice |
+### Beginning with Komea Dashboard Core
+
+```puppet
+include ::komea_dashboard_core
+```
+
+## Reference
+
+### Classes
+
+#### Public classes
+
+* komea_dashboard_core: Main class, includes all other classes.
+
+#### Private classes
+
+* komea_dashboard_core::params: Sets parameter defaults per operating system.
+* komea_dashboard_core::install: Handles the packages.
+* komea_dashboard_core::config: Handles the configuration file.
+* komea_dashboard_core::service: Handles the services.
+
+#### Parameters
+
+The following parameters are available in the `::komea_dashboard_core` class:
+
+##### `version`
+
+Specifies the Komea Dashboard's version that will be installed. Valid options: string. Default value: 'sprint'.
+
+##### `activemq_version`
+
+Specifies the Apache ActiveMQ's version that will be used by Komea Dashboard. Valid options: string. Default value: '5.12.2'.
+
+##### `komea_security_version`
+
+Specifies the Komea Security's version that will be used by Komea Dashboard. Valid options: string. Default value: '0.1'.
+
+##### `default_user`
+
+Specifies the username of a valid Komea Security's user that will be used by the microservices to communicate with each other. Valid options: string. Default value: _undef_.
+
+##### `default_password`
+
+Specifies the password of the Komea Security's user that will be used by the microservices to communicate with each other. Valid options: string. Default value: _undef_.
+
+##### `nexus_url`
+
+Specifies the url of the Nexus server that will be used to retrieve Komea Dashboard's artifacts. Valid options: string. Default value: _undef_.
+
+##### `nexus_repository`
+
+Specifies the name of the Nexus repository that contains Komea Dashboard Core's artifacts. Valid options: string. Default value: 'komea'.
+
+##### `nexus_third_parties_repository`
+
+Specifies the name of the Nexus repository that contains Komea Dashboard's third parties components _(ex: Apache ActiveMQ)_. Valid options: string. Default value: 'komea-third-parties'.
+
+##### `nexus_user`
+
+Specifies the username of a valid Nexus user with the necessary privileges to download all required artifacts. Valid options: string. Default value: _undef_.
+
+##### `nexus_password`
+
+Specifies the password of the Nexus user that will be used to download the required artifacts. Valid options: string. Default value: _undef_.
+
+##### `base_location`
+
+Specifies the path of the directory where Komea Dashboard Core components will be installed (the directory will be automatically created if it does not exist). Valid options: string. Default value: '/opt/echoes/dashboard'.
+
+##### `logs_location`
+
+Specifies the path of the directory that will contains all output logs of each Komea Dashboard's microservice. Valid options: string. Default value: '/var/log'.
+
+## Limitations
+
+Debian family OSes are officially supported. Tested and built on Debian.
+
+##Development
+
+[Echoes Technologies](https://www.echoes-tech.com) modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great.
+
+## Contributors
+
+The list of contributors can be found at: https://github.com/echoes-tech/puppet-komea-dashboard-core/graphs/contributors
