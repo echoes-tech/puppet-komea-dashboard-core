@@ -7,7 +7,7 @@ Manage Komea Dashboard core functionalities installation and configuration from 
 * **java** 1.7 or higher
 * package **curl**
 * package **zip/unzip**
-* a running **ElasticSearch** database that can be accessed by the machine that will host Komea Dashboard 
+* a running **ElasticSearch** _(version 2.3 or higher)_ database that can be accessed by the machine that will host Komea Dashboard 
 
 ## Parameters
 
