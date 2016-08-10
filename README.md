@@ -106,9 +106,9 @@ Specifies the path of the directory that will contains all output logs of each K
 
 Debian family OSes are officially supported. Tested and built on Debian.
 
-##Development
+## Development
 
-[Echoes Technologies](https://www.echoes-tech.com) modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great.
+[Echoes Technologies](https://echoes.fr) modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great.
 
 ## Contributors
 
