@@ -50,6 +50,15 @@ class komea_dashboard_core::service inherits komea_dashboard_core {
     status  => "/etc/init.d/admin-server status",
   }
 
+  #---------------- API GATEWAY -------------------#
+
+  service { 'api-gateway':
+    ensure => running,
+    start   => "/etc/init.d/api-gateway start",
+    stop    => "/etc/init.d/api-gateway stop",
+    status  => "/etc/init.d/api-gateway status",
+  }
+
   #----------------- ADMIN GUI -------------------#
 
   service { 'admin-gui':

@@ -114,6 +114,24 @@ class komea_dashboard_core::install (
     content => template("${module_name}/${app_admin_name}.sh.erb")
   }
 
+  #--------------- API GATEWAY ---------------#
+
+  $app_gateway_name = "api-gateway"
+  $app_gateway_path = $base_location/$app_gateway_name
+
+  file { "$app_gateway_path":
+    ensure  => 'directory',
+    mode    => '0755'
+  }
+
+  file { "/etc/init.d/$app_gateway_name":
+    ensure  => 'present',
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0755',
+    content => template("${module_name}/${app_gateway_name}.sh.erb") 
+  }
+
   #---------------- ADMIN GUI ----------------#
 
   $app_gui_name = "admin-gui"

@@ -16,8 +16,9 @@ APP_METRICS_PATH="$KOMEA_LOCATION/application-metrics"
 APP_CHARTS_PATH="$KOMEA_LOCATION/application-charts"
 ADMIN_GUI_PATH="$KOMEA_LOCATION/admin-gui"
 ADMIN_SERVER_PATH="$KOMEA_LOCATION/admin-server"
+API_GATEWAY_PATH="$KOMEA_LOCATION/api-gateway"
 
-KOMEA_GROUP_ID="org/komea/dashboard"
+KOMEA_GROUP_ID="fr/echoes/labs/ksf/dashboard"
 SECURITY_GROUP_ID="org/komea/security"
 APACHE_GROUP_ID="org/apache"
 
@@ -49,6 +50,7 @@ retrieveFromNexus "$APP_METRICS_PATH/application-metrics.jar" $NEXUS_REPOSITORY 
 retrieveFromNexus "$APP_CHARTS_PATH/application-charts.jar" $NEXUS_REPOSITORY $KOMEA_GROUP_ID "application-charts" $VERSION "jar"
 retrieveFromNexus "$ADMIN_GUI_PATH/admin-gui.jar" $NEXUS_REPOSITORY $KOMEA_GROUP_ID "gui-organization" $VERSION "jar"
 retrieveFromNexus "$ADMIN_SERVER_PATH/admin-server.jar" $NEXUS_REPOSITORY $KOMEA_GROUP_ID "admin-server" $VERSION "jar"
+retrieveFromNexus "$API_GATEWAY_PATH/api-gateway.jar" $NEXUS_REPOSITORY $KOMEA_GROUP_ID "api-gateway" $VERSION "jar"
 
 # Deploy ActiveMQ
 ACTIVEMQ_ZIP="$KOMEA_LOCATION/apache-activemq.zip"

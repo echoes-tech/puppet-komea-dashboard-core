@@ -1,0 +1,32 @@
+server.port=8081
+server.context-path=/api/dashboard
+
+ribbon.eureka.enabled=false
+zuul.sensitiveHeaders=Cookie,Set-Cookie
+
+zuul.host.socket-timeout-millis=30000
+
+cors.allowed.maxAge=0
+
+#------ Routes -------#
+
+zuul.routes.timeseries.path=/timeseries/**
+zuul.routes.timeseries.url=http://localhost:8090
+
+zuul.routes.organization.path=/organization/**
+zuul.routes.organization.url=http://localhost:8091
+
+zuul.routes.metrics.path=/kpis/**
+zuul.routes.metrics.url=http://localhost:8092
+
+zuul.routes.charts.path=/charts/**
+zuul.routes.charts.url=http://localhost:8095
+
+zuul.routes.exporter.path=/exporter/**
+zuul.routes.exporter.url=http://localhost:8082
+
+#------ Routes -------#
+
+#------ Logging ------#
+logging.config=logback.xml
+#------ Logging ------#
