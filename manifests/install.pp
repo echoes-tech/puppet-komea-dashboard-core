@@ -117,7 +117,7 @@ class komea_dashboard_core::install (
   #--------------- API GATEWAY ---------------#
 
   $app_gateway_name = "api-gateway"
-  $app_gateway_path = $base_location/$app_gateway_name
+  $app_gateway_path = "$base_location/$app_gateway_name"
 
   file { "$app_gateway_path":
     ensure  => 'directory',
@@ -129,7 +129,7 @@ class komea_dashboard_core::install (
     owner   => 'root',
     group   => 'root',
     mode    => '0755',
-    content => template("${module_name}/${app_gateway_name}.sh.erb") 
+    content => template("${module_name}/${app_gateway_name}.sh.erb")
   }
 
   #---------------- ADMIN GUI ----------------#
