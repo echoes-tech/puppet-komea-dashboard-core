@@ -18,9 +18,9 @@ class komea_dashboard_core::service inherits komea_dashboard_core {
 
   service { 'application-organization':
     ensure => running,
-    start   => "/etc/init.d/application-timeseries start",
-    stop    => "/etc/init.d/application-timeseries stop",
-    status  => "/etc/init.d/application-timeseries status",
+    start   => "/etc/init.d/application-organization start",
+    stop    => "/etc/init.d/application-organization stop",
+    status  => "/etc/init.d/application-organization status",
   }
 
   #------------- APPLICATION METRICS --------------#
