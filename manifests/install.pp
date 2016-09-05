@@ -24,6 +24,8 @@ class komea_dashboard_core::install (
     mode    => '0755'
   }
 
+  $application_script = file("${module_name}/application.sh")
+
   #------------ APPLICATION TIMESERIES ------------#
 
   $app_timeseries_name = "application-timeseries"
