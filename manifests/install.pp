@@ -24,6 +24,7 @@ class komea_dashboard_core::install (
     mode    => '0755'
   }
 
+  $admin_server_url   = "http://localhost:8089/admin-server" 
   $application_script = file("${module_name}/application.sh")
 
   #------------ APPLICATION TIMESERIES ------------#

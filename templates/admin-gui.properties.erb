@@ -1,8 +1,9 @@
 server.port=9000
+server.context-path=/bsc
 mode_local=false
 
 #--- Spring Admin ---#
-spring.boot.admin.url=http://localhost:8089
+spring.boot.admin.url=<%= @admin_server_url %>
 #--- Spring Admin ---#
 
 #--- Security ---#
