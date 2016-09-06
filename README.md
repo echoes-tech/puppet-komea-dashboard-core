@@ -16,7 +16,16 @@ Puppet module to manage Komea Dashboard core functionalities installation and co
 
 ## Module Description
 
-This module installs and configures [Komea Dashboard](https://echoes.fr/ksf/).
+This module installs and configures the following [Komea Dashboard](https://echoes.fr/ksf/)'s components:
+
+* **application-timeseries**: REST API for accessing and storing _TimeSeries_ ;
+* **application-organization**: REST API for accessing and storing _Organization_ data ;
+* **application-metrics**: REST API for accessing and storing data about _metrics, kpis and connectors' options_ ; 
+* **application-charts**: REST API used by Liferay Portal to build charts from _TimeSeries_ and _Organization_ data ;
+* **api-gateway**: The front door for all requests from connectors and web sites to _Komea Dashboard_'s microservices ; 
+* **admin-server**: Application used for monitoring Komea Dashboard's microservices statuses ;
+* **admin-gui**: Application used for managing Komea Dashboard's entities, kpis and metrics ;
+* **ActiveMQ**: Message system used to handle asynchronous communication between _Komea Dashboard_'s components.
 
 ## Setup
 
