@@ -10,6 +10,8 @@ class komea_dashboard_core::params {
   $default_user           = undef
   $default_password       = undef
   $komea_security_url     = "http://localhost:8096"
+  $cas_url                = undef
+  $komea_gui_url          = undef
 
   $nexus_url              = undef
   $nexus_repository       = "komea"

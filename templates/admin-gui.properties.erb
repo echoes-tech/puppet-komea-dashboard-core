@@ -8,12 +8,24 @@ spring.boot.admin.url=<%= @admin_server_url %>
 
 #--- Security ---#
 security.url=<%= @komea_security_url %>
-login=<%= @default_user %>
-password=<%= @default_password %>
+security.user.name=<%= @default_user %>
+security.user.password=<%= @default_password %>
 #--- Security ---#
+
+#--- Central Authentication Service ---#
+<% if @cas_url %>
+spring.profiles.active=casAuthentication
+security.cas.prefix = <%= @cas_url %>
+security.cas.serviceHome = <%= @komea_gui_url %>
+<% else %>
+spring.profiles.active=komeaAuthentication
+<% end %>
+#--- Central Authentication Service ---#
 
 #--- Dashboard Services ---#
 organization_url=http://localhost:8091
+metrics_url=http://localhost:8092
+timeseries_url=http://localhost:8090
 #--- Dashboard Services ---#
 
 #------ Logging ------#
