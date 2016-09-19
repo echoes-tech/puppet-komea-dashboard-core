@@ -83,6 +83,14 @@ Specifies the username of a valid Komea Security's user that will be used by the
 
 Specifies the password of the Komea Security's user that will be used by the microservices to communicate with each other. Valid options: string. Default value: _undef_.
 
+##### `cas_url`
+
+Specifies the URL of the CAS server that will be used for enabling SSO authentication in Komea GUI application. Valid options: string. Default value: _undef_.
+
+##### `komea_gui_url`
+
+Specifies the public Komea GUI URL that will be sent to the CAS server during authentication. Valid options: string. Default value: _undef_.
+
 ##### `nexus_url`
 
 Specifies the url of the Nexus server that will be used to retrieve Komea Dashboard's artifacts. Valid options: string. Default value: _undef_.
