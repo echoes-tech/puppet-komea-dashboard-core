@@ -40,6 +40,9 @@ retrieveFromNexus() {
   else
     echo "$OUTPUT_MD5 != $REMOTE_MD5"
     curl -X GET -u $NEXUS_LOGIN:$NEXUS_PASSWORD -o $OUTPUT  "$NEXUS_URL/content/repositories/$REPO/$GROUP_ID/$ARTIFACT/$ARTIFACT_VERSION/$ARTIFACT-$ARTIFACT_VERSION.$EXTENSION"
+    if [ -x "/etc/init.d/$ARTIFACT" ]; then
+      /etc/init.d/$ARTIFACT restart
+    fi
   fi
 }
 
