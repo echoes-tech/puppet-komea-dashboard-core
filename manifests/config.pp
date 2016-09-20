@@ -4,6 +4,7 @@ class komea_dashboard_core::config (
   $default_user       = $::komea_dashboard_core::default_user,
   $default_password   = $::komea_dashboard_core::default_password,
   $komea_security_url = $::komea_dashboard_core::komea_security_url,
+  $admin_server_url   = $::komea_dashboard_core::admin_server_url,
   $cas_url            = $::komea_dashboard_core::cas_url,
   $komea_gui_url      = $::komea_dashboard_core::komea_gui_url,
   $base_location      = $::komea_dashboard_core::base_location,

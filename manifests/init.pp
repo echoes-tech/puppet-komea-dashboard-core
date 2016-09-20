@@ -5,6 +5,7 @@ class komea_dashboard_core (
   $default_user       = $::komea_dashboard_core::params::default_user,
   $default_password   = $::komea_dashboard_core::params::default_password,
   $komea_security_url = $::komea_dashboard_core::params::komea_security_url,
+  $admin_server_url   = $::komea_dashboard_core::params::admin_server_url,
   $cas_url            = $::komea_dashboard_core::params::cas_url,
   $komea_gui_url      = $::komea_dashboard_core::params::komea_gui_url,
   $nexus_repository   = $::komea_dashboard_core::params::nexus_repository,

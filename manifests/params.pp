@@ -10,6 +10,7 @@ class komea_dashboard_core::params {
   $default_user           = undef
   $default_password       = undef
   $komea_security_url     = "http://localhost:8096"
+  $admin_server_url       = "http://localhost:8089/admin-server"
   $cas_url                = undef
   $komea_gui_url          = undef
 
