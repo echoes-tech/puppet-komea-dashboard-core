@@ -23,9 +23,11 @@ spring.profiles.active=komeaAuthentication
 #--- Central Authentication Service ---#
 
 #--- Dashboard Services ---#
-organization_url=http://localhost:8091
-metrics_url=http://localhost:8092
-timeseries_url=http://localhost:8090
+services.organization.url=http://localhost:8091
+services.metrics.url=http://localhost:8092
+services.timeseries.url=http://localhost:8090
+services.login=<%= @default_user %>
+services.password=<%= @default_password %>
 #--- Dashboard Services ---#
 
 #------ Logging ------#
