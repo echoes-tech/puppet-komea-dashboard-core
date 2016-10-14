@@ -18,9 +18,9 @@ ADMIN_GUI_PATH="$KOMEA_LOCATION/admin-gui"
 ADMIN_SERVER_PATH="$KOMEA_LOCATION/admin-server"
 API_GATEWAY_PATH="$KOMEA_LOCATION/api-gateway"
 
-KOMEA_GROUP_ID="fr/echoes/labs/ksf/dashboard"
-SECURITY_GROUP_ID="org/komea/security"
-APACHE_GROUP_ID="org/apache"
+KOMEA_GROUP_ID="<%= @nexus_komea_group_id %>"
+SECURITY_GROUP_ID="<%= @nexus_security_group_id %>"
+APACHE_GROUP_ID="<%= @nexus_apache_group_id %>"
 
 retrieveFromNexus() {
   OUTPUT=$1

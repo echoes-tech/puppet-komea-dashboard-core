@@ -13,6 +13,9 @@ class komea_dashboard_core (
   $nexus_url          = $::komea_dashboard_core::params::nexus_url,
   $nexus_user         = $::komea_dashboard_core::params::nexus_user,
   $nexus_password     = $::komea_dashboard_core::params::nexus_password,
+  $nexus_komea_group_id = $::komea_dashboard_core::params::nexus_komea_group_id,
+  $nexus_security_group_id = $::komea_dashboard_core::params::nexus_security_group_id,
+  $nexus_apache_group_id = $::komea_dashboard_core::params::nexus_apache_group_id,
   $base_location      = $::komea_dashboard_core::params::base_location,
   $logs_location      = $::komea_dashboard_core::params::logs_location
 ) inherits komea_dashboard_core::params {

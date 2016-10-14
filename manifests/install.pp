@@ -8,6 +8,9 @@ class komea_dashboard_core::install (
   $nexus_third_parties_repository = $::komea_dashboard_core::nexus_third_parties_repository,
   $nexus_user       = $::komea_dashboard_core::nexus_user,
   $nexus_password   = $::komea_dashboard_core::nexus_password,
+  $nexus_komea_group_id = $::komea_dashboard_core::nexus_komea_group_id,
+  $nexus_security_group_id = $::komea_dashboard_core::nexus_security_group_id,
+  $nexus_apache_group_id = $::komea_dashboard_core::nexus_apache_group_id,
   $base_location    = $::komea_dashboard_core::base_location
 )inherits komea_dashboard_core {
   if $caller_module_name != $module_name {
@@ -24,7 +27,7 @@ class komea_dashboard_core::install (
     mode    => '0755'
   }
 
-  $admin_server_url   = "http://localhost:8089/admin-server" 
+  $admin_server_url   = "http://localhost:8089/admin-server"
   $application_script = file("${module_name}/application.sh")
 
   #------------ APPLICATION TIMESERIES ------------#

@@ -19,6 +19,9 @@ class komea_dashboard_core::params {
   $nexus_third_parties_repository = "komea-third-parties"
   $nexus_user             = undef
   $nexus_password         = undef
+  $nexus_komea_group_id   = "fr/echoes/labs/ksf/dashboard"
+  $nexus_security_group_id= "fr/echoes/ksf/security"
+  $nexus_apache_group_id  = "org/apache"
 
   $base_location          = "/opt/echoes/dashboard"
   $logs_location          = "/var/log"
