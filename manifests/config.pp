@@ -180,4 +180,10 @@ class komea_dashboard_core::config (
     notify => Service['activemq']
   }
 
+  file { "${activemq_path}-${activemq_version}/conf/jetty.xml":
+    ensure  => file,
+    content => template("${module_name}/activemq_jetty.xml.erb"),
+    notify => Service['activemq']
+  }
+
 }
