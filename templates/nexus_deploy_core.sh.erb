@@ -17,6 +17,7 @@ APP_CHARTS_PATH="$KOMEA_LOCATION/application-charts"
 ADMIN_GUI_PATH="$KOMEA_LOCATION/admin-gui"
 ADMIN_SERVER_PATH="$KOMEA_LOCATION/admin-server"
 API_GATEWAY_PATH="$KOMEA_LOCATION/api-gateway"
+API_TV_PATH="$KOMEA_LOCATION/application-tv"
 
 KOMEA_GROUP_ID="<%= @nexus_komea_group_id %>"
 SECURITY_GROUP_ID="<%= @nexus_security_group_id %>"
@@ -65,6 +66,7 @@ retrieveFromNexus "$APP_CHARTS_PATH/application-charts.jar" $NEXUS_REPOSITORY $K
 retrieveFromNexus "$ADMIN_GUI_PATH/admin-gui.jar" $NEXUS_REPOSITORY $KOMEA_GROUP_ID "komea-gui" $VERSION "jar"
 retrieveFromNexus "$ADMIN_SERVER_PATH/admin-server.jar" $NEXUS_REPOSITORY $KOMEA_GROUP_ID "admin-server" $VERSION "jar"
 retrieveFromNexus "$API_GATEWAY_PATH/api-gateway.jar" $NEXUS_REPOSITORY $KOMEA_GROUP_ID "api-gateway" $VERSION "jar"
+retrieveFromNexus "$APP_TV_PATH/application-tv.jar" $NEXUS_REPOSITORY $KOMEA_GROUP_ID "application-tv" $VERSION "jar"
 
 # Deploy ActiveMQ
 ACTIVEMQ_ZIP="$KOMEA_LOCATION/apache-activemq.zip"

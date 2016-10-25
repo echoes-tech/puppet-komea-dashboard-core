@@ -125,6 +125,28 @@ class komea_dashboard_core::config (
     notify  => Service['admin-server']
   }
 
+  #--------------- APPLICATION TV ---------------#
+
+  $app_tv_name = "application-tv"
+  $app_tv_path = "$base_location/$app_tv_name/"
+  $app_tv_logs_location = "$logs_location/$app_tv_name/"
+
+  file { "${app_tv_path}application.properties":
+    ensure  => file,
+    content => template("${module_name}/$app_tv_name.properties.erb"),
+  }
+
+  file { "$app_tv_logs_location":
+    ensure  => 'directory',
+    mode    => '0755'
+  }
+
+  file { "${app_tv_path}logback.xml":
+    ensure  => file,
+    content => template("${module_name}/${app_tv_name}-logback.xml.erb"),
+    notify  => Service['application-tv']
+  }
+
   #--------------- ADMIN GUI ---------------#
 
   $app_gui_name = "admin-gui"
