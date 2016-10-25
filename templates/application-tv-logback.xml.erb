@@ -8,10 +8,10 @@
     </appender>
 
     <appender name="FILE-INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file><%= @app_gui_logs_location %>application.log</file>
+        <file><%= @app_tv_logs_location %>application.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <fileNamePattern><%= @app_gui_logs_location %>application-%i.log</fileNamePattern>
+            <fileNamePattern><%= @app_tv_logs_location %>application-%i.log</fileNamePattern>
             <minIndex>1</minIndex>
             <maxIndex>3</maxIndex>
         </rollingPolicy>
@@ -30,10 +30,10 @@
             <level>ERROR</level>
         </filter>
 
-        <file><%= @app_gui_logs_location %>error.log</file>
+        <file><%= @app_tv_logs_location %>error.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-            <fileNamePattern><%= @app_gui_logs_location %>error-%i.log</fileNamePattern>
+            <fileNamePattern><%= @app_tv_logs_location %>error-%i.log</fileNamePattern>
             <minIndex>1</minIndex>
             <maxIndex>3</maxIndex>
         </rollingPolicy>

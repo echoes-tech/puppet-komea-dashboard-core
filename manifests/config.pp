@@ -130,7 +130,7 @@ class komea_dashboard_core::config (
   $app_tv_name = "application-tv"
   $app_tv_path = "$base_location/$app_tv_name/"
   $app_tv_logs_location = "$logs_location/$app_tv_name/"
-
+  
   file { "${app_tv_path}application.properties":
     ensure  => file,
     content => template("${module_name}/$app_tv_name.properties.erb"),
