@@ -59,15 +59,6 @@ class komea_dashboard_core::service inherits komea_dashboard_core {
     status  => "/etc/init.d/api-gateway status",
   }
 
-  #----------------- APPLICATION TV -------------------#
-
-  service { 'application-tv':
-    ensure => running,
-    start   => "/etc/init.d/application-tv start",
-    stop    => "/etc/init.d/application-tv stop",
-    status  => "/etc/init.d/application-tv status",
-  }
-
   #----------------- ADMIN GUI -------------------#
 
   service { 'admin-gui':

@@ -138,24 +138,6 @@ class komea_dashboard_core::install (
     content => template("${module_name}/${app_gateway_name}.sh.erb")
   }
 
-  #---------------- APPLICATION TV ----------------#
-
-  $app_tv_name = "application-tv"
-  $app_tv_path = "$base_location/$app_tv_name/"
-
-  file { "$app_tv_path":
-    ensure  => 'directory',
-    mode    => '0755'
-  }
-
-  file { "/etc/init.d/$app_tv_name":
-    ensure  => 'present',
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0755',
-    content => template("${module_name}/${app_tv_name}.sh.erb")
-  }
-
   #---------------- ADMIN GUI ----------------#
 
   $app_gui_name = "admin-gui"
