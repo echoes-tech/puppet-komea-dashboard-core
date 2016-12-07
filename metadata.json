@@ -1,12 +1,12 @@
 {
   "name": "echoes-komea_dashboard_core",
-  "version": "4.1",
+  "version": "0.4.1",
   "author": "Echoes Technologies",
   "summary": "Puppet module to manage Komea Dashboard core functionalities installation and configuration",
   "license": "Apache-2.0",
-  "source": "",
-  "project_page": "",
-  "issues_url": "",
+  "source": "https://github.com/echoes-tech/puppet-komea-dashboard-core",
+  "project_page": "https://github.com/echoes-tech/puppet-komea-dashboard-core",
+  "issues_url": "https://github.com/echoes-tech/puppet-komea-dashboard-core/issues",
   "tags": [
     "git"
   ],
